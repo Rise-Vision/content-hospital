@@ -155,8 +155,12 @@ body {
 	padding: 0;
 	position: absolute;
 	z-index: 1;
-	filter: url(#blur-effect);
+	-webkit-filter: url(#blur-effect);
   -webkit-filter: blur(25px);
+  -moz-filter: blur(25px);
+  -o-filter: blur(25px);
+  -ms-filter: blur(25px);
+  filter: blur(25px);
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
