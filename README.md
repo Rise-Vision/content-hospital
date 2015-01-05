@@ -71,7 +71,7 @@ The animation attributes assigned to the images are controlled within css/style-
 
 To add more than 2 images you will need to duplicate the container and img tags within index.html and adapt all the animation delays within the css.
 example: ```-webkit-animation: bounceInRightImage 20s .8s ease infinite;```.
-(.8s is the dealy in this example).
+(.8s is the delay in this example).
 
 ## Built With
 actual tools used
