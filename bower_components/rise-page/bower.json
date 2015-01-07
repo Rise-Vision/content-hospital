@@ -1,0 +1,32 @@
+{
+  "name": "rise-page",
+  "version": "1.0.0",
+  "authors": [
+    "Donna Peplinskie <donna.peplinskie@risevision.com>"
+  ],
+  "description": "Rise Page Web Component",
+  "main": "rise-page.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "license": "GPLv3",
+  "homepage": "https://github.com/Rise-Vision/web-component-rise-page",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test"
+  ],
+  "dependencies": {
+    "iron-ajax": "PolymerElements/iron-ajax#^1.0.0",
+    "polymer": "#^1.0.0",
+    "underscore": "~1.8.3"
+  },
+  "devDependencies": {
+    "rise-distribution": "https://github.com/Rise-Vision/web-component-rise-distribution.git",
+    "rise-playlist": "https://github.com/Rise-Vision/web-component-rise-playlist.git",
+    "rise-playlist-item": "https://github.com/Rise-Vision/web-component-rise-playlist-item.git#1.0.2",
+    "web-component-tester": "~3.1.3"
+  }
+}

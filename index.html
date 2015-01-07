@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,62 +36,91 @@
 <!--Fonts-->
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  
+<!--Web components-->
+<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
-<!--Web Components-->    
-<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-<link rel="import" href="bower_components/google-sheets/google-sheets.html">
-<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/rise-page/rise-page.html">
+<link rel="import" href="bower_components/rise-playlist-item/rise-playlist-item.html">
+<link rel="import" href="bower_components/rise-distribution/rise-distribution.html">
+<link rel="import" href="bower_components/rise-playlist/rise-playlist.html">
+<link rel="import" href="bower_components/rise-playlist/demo-component.html">
+<!--<link rel="import" href="bower_components/rise-google-sheet/rise-google-sheet.html">-->
 </head>
+<body>
+  <rise-page id="page" display-id="VGZUDDWYAZHY">
+    <rise-playlist id="playlist" intro="bounceInRight" outro="bounceOutRight">
+            
+      <rise-playlist-item duration="5">
+        <demo-component id="doctorMale" src="images/doctor-male.png"></demo-component>
+      </rise-playlist-item>
 
-<body unresolved>
-	
+      <rise-playlist-item duration="5">
+        <demo-component id="doctorFemale" src="images/doctor-female.png"></demo-component>
+      </rise-playlist-item>
+
+    </rise-playlist>
+    <rise-playlist id="playlist2" intro="bounceInLeft" outro="bounceOutLeft">
+
+      <!--<rise-playlist-item duration="5">
+        <rise-google-sheet id="googleSheet"
+                           key="1Wj-PV0YIi4I0qZs-HW-WDTVUrz6RP_GiVshndQkRD-Y">
+          <table id="sheetTable" class="pure-table pure-table-bordered">
+            <thead>
+            <tr>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </rise-google-sheet>
+      </rise-playlist-item>-->
+
+      <rise-playlist-item duration="5">
+        <demo-component id="message1" src="images/message1.png"></demo-component>
+      </rise-playlist-item>
+
+      <rise-playlist-item duration="5">
+        <demo-component id="message2" src="images/message2.png"></demo-component>
+      </rise-playlist-item>
+
+    </rise-playlist>
+    
+    
+  </rise-page>
+  
+<!-- Importing javascript which is the logic in building and managing the Google Sheet content -->
+<!--<script type="text/javascript" src="bower_components/rise-google-sheet/demo-playlist.js"></script>
+
+<script>
+  /* global DemoPlaylist */
+
+  (function () {
+    "use strict";
+
+    function webComponentsReady() {
+      window.removeEventListener("WebComponentsReady", webComponentsReady);
+
+      // new instance of DemoPlaylist object
+      var demo = new DemoPlaylist();
+
+      // initialize the content
+      demo.init();
+    }
+
+    window.addEventListener("WebComponentsReady", webComponentsReady);
+
+  })();
+</script>-->
+  
 <!--LOGO-->
 <div id="logo-container">
-	<img src="images/logo.svg"/>
+  <img src="images/logo.svg"/>
 </div>
 
-<!--TEXT CONTENT-->
-<!-- Published Spreadsheet Details -->
-<google-sheets id="sheet" 
-               key="1Wj-PV0YIi4I0qZs-HW-WDTVUrz6RP_GiVshndQkRD-Y"
-               gid="0"
-               rows="{{rows}}"
-               published>
-</google-sheets>
- 
-<!--Text Transition-->  
-<div  id="content">
-
-<!--Information collected from google sheet-->
-    <main layout horizontal>
-         <section>
-             <template id="rows" bind>
-
-<!-- Information from Spreadsheet Rows -->
-                <template repeat="{{rows}}">
-                    <div class="slides">
-                        <span class="date">{{gsx$date.$t}}</span>
-                        <span class="event">{{gsx$event.$t}}</span>
-                        <span class="desc">{{gsx$description.$t}}</span>
-                    </div>
-                 </template>
-            </template>
-        </section>
-    </main>
-</div>
-
-<!--DOCTOR IMAGES -->
-<div id="doctor-container1">
-	<img src="images/doctor-male.png"/>
-</div>
-	
-<div id="doctor-container2">
-	<img src="images/doctor-female.png"/>
-</div>
-	
 <!--BACKGROUND -->   
 <div class="background">
-	<img src="images/background-small.jpg">
+  <img src="images/background-small.jpg">
 </div>
     
 <!--Box-->	
@@ -100,17 +130,13 @@
 <!--Footer Icons-->
 <!--Github Icon-->
 <div id="github">
-    <a type="button" id="gitbtn" href="https://github.com/Rise-Vision/content-hospital" target="_blank"><i class="fa fa-github fa-lg "></i></a>
+  <a type="button" id="gitbtn" href="https://github.com/Rise-Vision/content-hospital" target="_blank"><i class="fa fa-github fa-lg "></i></a>
 </div>
     
 <!--Rise Icon-->
 <div id="rise">
-    <a href="http://www.risevision.com/" target="_blank"><img id="risebtn" src="images/rise-icon.png"/></a>
+  <a href="http://www.risevision.com/" target="_blank"><img id="risebtn" src="images/rise-icon.png"/></a>
 </div>
-	
-<!--SCRIPTS-->
-<script src='js/jquery.js'></script>
-<script src="js/google-sheets.js"></script>
 	
 </body> 
 </html>
