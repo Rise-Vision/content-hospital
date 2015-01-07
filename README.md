@@ -35,12 +35,15 @@ The text content is displayed through the use of the google-sheets web component
 
 You can use your own public spreadsheet by locating the following code in the index.html file:
 
-```<google-sheets id="sheet" 
+```
+<google-sheets id="sheet" 
                key="1Wj-PV0YIi4I0qZs-HW-WDTVUrz6RP_GiVshndQkRD-Y"
                gid="0"
                rows="{{rows}}"
                published>
-</google-sheets>```
+</google-sheets>
+
+```
 
 The key for your spreadsheet can be found when viewing the document online, as can be seen in the example above. 
 

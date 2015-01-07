@@ -138,7 +138,7 @@ body {
     width: 68vw;
 	height: 100vh;
 	z-index: 4;
-	background: -webkit-linear-gradient(left, rgba(50,60,60,0.7) 0%,rgba(50,60,60,.9) 100%);
+	background: -webkit-linear-gradient(left, rgba(20,20,20,0.5) 0%,rgba(50,60,60,.9) 100%);
 }
 
 /* Background Image*/
