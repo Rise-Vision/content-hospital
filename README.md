@@ -24,17 +24,11 @@ The Hospital Template was created to showcase current news & events that would b
 ####Changing the Animated Background Image
 Open index.html, locate the following code and modify the src url of the img tag to the path of your new background:
 
+```  
+<div class="background">
+	<img src="images/background-small.jpg">
+</div>
 ```
-<div class="viewport">
-    <div class="content-wrapper">
-      <div class="content">
-        <img src="images/background-small.jpg">
-      </div>
-    </div>
-  </div>
-```
-
-Part of the background image is blurred and it can be modified within css/style-main.css file. Look for the classes ```.blur-box``` and ```.content-blurred```. The fluid aspect of this blurred effect is done with jquery. It can be customized within the js/blur.js and js/jquery.js files.
 
 ####Changing The Text Content
 The text content is displayed through the use of the google-sheets web component. The example spreadsheet is located at https://docs.google.com/a/risedisplay.com/spreadsheets/d/1Wj-PV0YIi4I0qZs-HW-WDTVUrz6RP_GiVshndQkRD-Y/edit#gid=0
