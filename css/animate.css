@@ -6,51 +6,88 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2014 Daniel Eden
 */
 
-@-webkit-keyframes bounceInRightText {
-	0%, 6%, 7%, 9%, 10% {
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
-
-	0% {opacity: 0;-webkit-transform: translate3d(3000px, 0, 0);}
-	3% {opacity: 1;-webkit-transform: translate3d(-25px, 0, 0);}
-	4% {-webkit-transform: translate3d(10px, 0, 0);}
-	5% {-webkit-transform: translate3d(-5px, 0, 0);}
-	6% {-webkit-transform: none;}
-	43% {opacity: 1;}
-	45% {opacity: 0;}
-	100% {opacity: 0;}
-}
-
-@-webkit-keyframes bounceInRightImage {
-	0%, 6%, 7%, 9%, 10% {
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
-
-	0% {opacity: 0;-webkit-transform: translate3d(3000px, 0, 0);}
-	3% {opacity: 1;-webkit-transform: translate3d(-25px, 0, 0);}
-	4% {-webkit-transform: translate3d(10px, 0, 0);}
-	5% {-webkit-transform: translate3d(-5px, 0, 0);}
-	6% {-webkit-transform: none;}
-	46% {opacity: 1;}
-	48% {opacity: 0;}
-	100% {opacity: 0;}
-}
-
-@-webkit-keyframes pulse {
+@-webkit-keyframes lightSpeedIn1 {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+            transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
   }
 
+  3% {
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  4% {
+    -webkit-transform: skewX(-5deg);
+            transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+  5% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+    45% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+     50% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0;
+  }
+    
+    100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0;
+  }
+}
+
+
+@-webkit-keyframes lightSpeedIn2 {
+    0% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 0;
+  }
+    
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-            transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
   }
 
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+  53% {
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg);
+    opacity: 1;
   }
+
+  54% {
+    -webkit-transform: skewX(-5deg);
+            transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+  55% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+    95% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+     100% {
+   -webkit-transform: none;
+            transform: none;
+    opacity: 0;
+  } 
 }
 
 @-webkit-keyframes flipInX {
