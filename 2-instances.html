@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>rise-google-sheet Playlist Content Demo</title>
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="bower_components/rise-page/rise-page.html">
+  <link rel="import" href="bower_components/rise-playlist-item/rise-playlist-item.html">
+  <link rel="import" href="bower_components/rise-distribution/rise-distribution.html">
+  <link rel="import" href="bower_components/rise-playlist/rise-playlist.html">
+  <link rel="import" href="bower_components/rise-playlist/demo-component.html">
+  <link rel="import" href="bower_components/rise-google-sheet/rise-google-sheet.html">
+ <!--Style Sheet-->
+<link rel="stylesheet" href="css/style-main.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="css/animate.css" media="screen" type="text/css" />
+  
+</head>
+  
+<body unresolved>
+  <rise-page id="page" display-id="VGZUDDWYAZHY">
+    <rise-playlist id="playlist" intro="bounceInRight" outro="bounceOutRight">
+      
+      <rise-playlist-item duration="5">
+      <rise-google-sheet id="googleSheet"
+                         key="1Wj-PV0YIi4I0qZs-HW-WDTVUrz6RP_GiVshndQkRD-Y"
+                         min-row="1" 
+                         max-row="2" 
+                         min-column="1" 
+                         max-column="12">
+      </rise-google-sheet>
+
+      <!-- Example HTML structure -->
+      <table id="sheetTable">
+        <thead>
+        <tr>
+          <!-- dynamically add column header titles -->
+        </tr>
+        </thead>
+        <tbody>
+        <!-- dynamically populate table cells -->
+        </tbody>
+      </table>
+        <script type="text/javascript" src="demo-playlist.js"></script>
+      </rise-playlist-item>
+      
+<rise-playlist-item duration="5">
+      <rise-google-sheet id="googleSheet2"
+                         key="1Wj-PV0YIi4I0qZs-HW-WDTVUrz6RP_GiVshndQkRD-Y"
+                         min-row="2" 
+                         max-row="3" 
+                         min-column="1" 
+                         max-column="12">
+      </rise-google-sheet>
+      <!-- Example HTML structure -->
+      <table id="sheetTable2">
+        <thead id="head2">
+        <tr class="row2">
+          <!-- dynamically add column header titles -->
+        </tr>
+        </thead>
+        <tbody class="body2">
+        <!-- dynamically populate table cells -->
+        </tbody>
+      </table>
+      </rise-playlist-item>
+      <script type="text/javascript" src="demo-playlist2.js"></script>
+
+    </rise-playlist>
+  </rise-page>
+      
+<!-- Importing javascript which is the logic in building and managing the Google Sheet content -->
+
+
+
+<script>
+  /* global DemoPlaylist */
+
+  (function () {
+    "use strict";
+
+    function webComponentsReady() {
+      window.removeEventListener("WebComponentsReady", webComponentsReady);
+
+      // new instance of DemoPlaylist object
+      var demo = new DemoPlaylist();
+      var demo2 = new DemoPlaylist2();
+
+      // initialize the content
+      demo.init();
+      demo2.init();
+    }
+
+    window.addEventListener("WebComponentsReady", webComponentsReady);
+
+  })();
+</script>
+  
+  
+
+</body>
+</html>

@@ -45,7 +45,7 @@
 <link rel="import" href="bower_components/rise-distribution/rise-distribution.html">
 <link rel="import" href="bower_components/rise-playlist/rise-playlist.html">
 <link rel="import" href="bower_components/rise-playlist/demo-component.html">
-<!--<link rel="import" href="bower_components/rise-google-sheet/rise-google-sheet.html">-->
+<link rel="import" href="bower_components/rise-google-sheet/rise-google-sheet.html">
 </head>
 <body>
   <rise-page id="page" display-id="VGZUDDWYAZHY">
@@ -62,26 +62,47 @@
     </rise-playlist>
     <rise-playlist id="playlist2" intro="bounceInLeft" outro="bounceOutLeft">
 
-      <!--<rise-playlist-item duration="5">
-        <rise-google-sheet id="googleSheet"
-                           key="1Wj-PV0YIi4I0qZs-HW-WDTVUrz6RP_GiVshndQkRD-Y">
-          <table id="sheetTable" class="pure-table pure-table-bordered">
-            <thead>
-            <tr>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-        </rise-google-sheet>
-      </rise-playlist-item>-->
-
       <rise-playlist-item duration="5">
-        <demo-component id="message1" src="images/message1.png"></demo-component>
+         <rise-google-sheet id="googleSheet"
+                         key="1Wj-PV0YIi4I0qZs-HW-WDTVUrz6RP_GiVshndQkRD-Y"
+                         min-row="1" 
+                         max-row="2" 
+                         min-column="1" 
+                         max-column="12">
+      </rise-google-sheet>
+
+      <!-- Example HTML structure -->
+      <table id="sheetTable">
+        <thead>
+        <tr>
+          <!-- dynamically add column header titles -->
+        </tr>
+        </thead>
+        <tbody>
+        <!-- dynamically populate table cells -->
+        </tbody>
+      </table>
       </rise-playlist-item>
 
       <rise-playlist-item duration="5">
-        <demo-component id="message2" src="images/message2.png"></demo-component>
+        <rise-google-sheet id="googleSheet2"
+                         key="1Wj-PV0YIi4I0qZs-HW-WDTVUrz6RP_GiVshndQkRD-Y"
+                         min-row="2" 
+                         max-row="3" 
+                         min-column="1" 
+                         max-column="12">
+      </rise-google-sheet>
+      <!-- Example HTML structure -->
+      <table id="sheetTable2">
+        <thead id="head2">
+        <tr class="row2">
+          <!-- dynamically add column header titles -->
+        </tr>
+        </thead>
+        <tbody class="body2">
+        <!-- dynamically populate table cells -->
+        </tbody>
+      </table>
       </rise-playlist-item>
 
     </rise-playlist>
@@ -90,7 +111,9 @@
   </rise-page>
   
 <!-- Importing javascript which is the logic in building and managing the Google Sheet content -->
-<!--<script type="text/javascript" src="bower_components/rise-google-sheet/demo-playlist.js"></script>
+
+<script type="text/javascript" src="demo-playlist.js"></script>
+<script type="text/javascript" src="demo-playlist2.js"></script>
 
 <script>
   /* global DemoPlaylist */
@@ -103,15 +126,17 @@
 
       // new instance of DemoPlaylist object
       var demo = new DemoPlaylist();
+      var demo2 = new DemoPlaylist2();
 
       // initialize the content
       demo.init();
+      demo2.init();
     }
 
     window.addEventListener("WebComponentsReady", webComponentsReady);
 
   })();
-</script>-->
+</script>
   
 <!--LOGO-->
 <div id="logo-container">

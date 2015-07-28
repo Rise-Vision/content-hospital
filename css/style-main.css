@@ -7,72 +7,52 @@ html, body {
   -webkit-user-select: none;
 }
 
-body {
-  font-family: 'Oswald', sans-serif;
-  color:white;
-  background-color:#6a6665;
-  z-index: 99;
+
+
+
+
+table {
+  font-family: 'Roboto', sans-serif;
+  padding:40px;
+}
+  
+tr {
+  height:300px;
 }
 
-/* Logo */
-#logo-container{
-  position:absolute;
-  left:5vw;
-  top:5vh;
-  z-index: 6;
-  margin:0;
+td {
+  padding-bottom: 5px;
 }
 
-#logo-container img{
-  width:30vw;
-  -webkit-animation: flipInX 1s ease 1;
-  -webkit-animation-fill-mode: forwards;
-   /* Hey browser, use your GPU */
-  -webkit-transform: translate3d(0, 0, 0);
+thead {
+  display:none;
+}
+ 
+td:nth-child(1) {
+  display: block;
+  clear:both;
+  font-size: 60px;
+  color:grey;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+  
+td:nth-child(2) {
+  display: block;
+  clear:both;
+  font-size:30px;
+  font-weight: 300;
+}
+  
+td:nth-child(3) {
+  display: block;
+  clear:both;
+  padding-top: 20px;
 }
 
-/* Doctor Images / Messages*/  
-/*rise-google-sheet {
-  position: absolute;
-  z-index: 99;
-  top:10vw;
-  left:5vw;
-  width:60vw;
-  height:50vw;
-  background-color: grey;
-}*/  
 
-#doctorMale{
-  position:absolute;
-  height:100vh;
-  top:5vh;
-  left:63vw;
-  z-index: 6;
-}
 
-#doctorFemale{
-  position:absolute;
-  height:100vh;
-  top:5vh;
-  left:63vw;
-  z-index: 6;
-}
 
-#message1{
-  position:absolute;
-  height:100vh;
-  top:16vh;
-  left:5vw;
-  z-index: 6;
-}
-
-#message2{
-  position:absolute;
-  height:100vh;
-  top:16vh;
-  left:5vw;
-  z-index: 6;
-}
 
 .bounceInRight {
   animation-name: bounceInRight;
@@ -100,29 +80,8 @@ body {
   animation-fill-mode: forwards;
 }
 
-/*BACKGROUND ELEMENTS*/
-#divider-container {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 0px;
-  width: 68vw;
-  height: 100vh;
-  z-index: 4;
-  background: -webkit-linear-gradient(left, rgba(20,20,20,0.5) 0%,rgba(50,60,60,.9) 100%);
-}
 
-/* Background Image*/
-.background img {
-  -webkit-animation-duration: 40s;
-  -webkit-animation-name: pulse;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-   /* Hey browser, use your GPU */
-  -webkit-transform: translate3d(0, 0, 0);
-  height:100vh;
-  width:100vw;
-}
+
 	
 /* Footer Icons */
 #github {
